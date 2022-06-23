@@ -62,7 +62,8 @@ function Header() {
                        
                     </li>
                     <li>
-                        <a href="/" className='nav-btn dvd'>DVD</a>
+                        <a href="/" className='nav-btn '>
+                           <span className='dvd'>DVD</span> </a>
                     </li>
                     <li>
                         <a href="/" className='nav-btn right-btn bell'>{bell}</a>
@@ -84,6 +85,25 @@ function Header() {
         </div>
 
           
+
+
+
+
+
+        <div className="popup-container">
+            <ul className='popup-list'>
+                <a className='profile-link' href="/">
+                    <img src={`${process.env.PUBLIC_URL}/assets/images/blue-smiley.png`} alt="derp" className='profile-pic profile-icon' /><span>Profile 1</span>
+                </a>
+                <a href="/" className='profile-link'>
+                    <img src={`${process.env.PUBLIC_URL}/assets/images/blue-smiley.png`} alt="derp" className='profile-pic profile-icon' /><span>Profile 2</span>
+                </a>
+                <a href="/" className='profile-link'>
+                    <img src={`${process.env.PUBLIC_URL}/assets/images/blue-smiley.png`} alt="derp" className='profile-pic profile-icon' /><span>Profile 3</span>
+                </a>
+            </ul>
+        </div>
+
 
 
     </div>

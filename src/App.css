@@ -1,10 +1,9 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
-body {
-  line-height: 1.2;
-}
+
 
 /* Header */
 
@@ -18,7 +17,7 @@ body {
 }
 
 li {
-  transform: translateY(43%);
+  transform: translateY(90%);
   margin-right: 18px;
 }
 
@@ -51,13 +50,14 @@ li {
 .header-container {
   background-color: #000;
   height: 68px;
-  position: relative;
+  position: fixed;
+  width: 100%;
 }
 
 .right-header {
   /* position: absolute; */
   margin-left: 1030px;
-  margin-top: -3px;
+  /* margin-top: 10px; */
 }
 
 img {
@@ -73,7 +73,7 @@ img {
   transform: rotate(-20deg);
   display: block;
   font-size: 1.3em;
-  margin-bottom: -10px;
+  /* margin-bottom: -10px; */
 }
 
 
@@ -102,8 +102,53 @@ img {
 }
 
 .dvd {
-  font-weight: 500;
+  font-weight: 600;
+  display: flex;
+  margin-bottom: -35px;
 }
+
+
+
+/*  */
+
+/* Popup */
+.popup-container {
+  position: fixed;
+  
+  
+}
+
+.popup-list {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #111;
+  left: 1680px;
+  padding: 0.8rem 0.6rem;
+  margin: 0;
+  width: 145px;
+  border-bottom: 1px solid #fff;
+
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  padding: .5em;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+
+.profile-pic {
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.profile-link:hover {
+  text-decoration: underline;
+}
+
 
 
 
