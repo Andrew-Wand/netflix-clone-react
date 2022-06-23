@@ -38,6 +38,7 @@ li {
 .nav-container {
   display: flex;
   align-items: flex-start;
+  
 }
 
 .logo {
@@ -55,7 +56,8 @@ li {
 
 .right-header {
   /* position: absolute; */
-  margin-left: 1050px;
+  margin-left: 1030px;
+  margin-top: -3px;
 }
 
 img {
@@ -64,17 +66,44 @@ img {
 
 .right-btn {
   font-size: 1.3em;
-  margin: 0px 4px 0px 4px;
+  margin: 0px 6px 0px 6px;
 }
 
 .glass {
   transform: rotate(-20deg);
   display: block;
-  font-size: 1.5em;
-  margin-bottom: -20px;
+  font-size: 1.3em;
+  margin-bottom: -10px;
 }
 
 
+
+
+.nav-btn:hover {
+  filter: brightness(75%);
+}
+
+.profile-icon {
+  height: 32px;
+  width: 32px;
+  border-radius: 4px;
+  border: 0;
+  display: flex;
+  margin-top: -26px;
+}
+
+.caret {
+  position: absolute;
+  color: #fff;
+  top: 10%;
+  left: 133%;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.dvd {
+  font-weight: 500;
+}
 
 
 

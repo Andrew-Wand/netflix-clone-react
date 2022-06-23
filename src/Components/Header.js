@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass, faBell } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faBell, faCaretDown } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -9,6 +9,7 @@ function Header() {
 
     const magnifyingGlass = <FontAwesomeIcon icon={faMagnifyingGlass} />
     const bell = <FontAwesomeIcon icon={faBell} />
+    const caret = <FontAwesomeIcon icon={faCaretDown} />
 
  
 
@@ -61,13 +62,17 @@ function Header() {
                        
                     </li>
                     <li>
-                        <a href="/" className='nav-btn'>DVD</a>
+                        <a href="/" className='nav-btn dvd'>DVD</a>
                     </li>
                     <li>
-                        <a href="/" className='nav-btn right-btn'>{bell}</a>
+                        <a href="/" className='nav-btn right-btn bell'>{bell}</a>
                     </li>
                     <li>
-                        <img src="" alt="derp" />
+                        <a href="/" >
+                            <img className='profile-icon' src={`${process.env.PUBLIC_URL}/assets/images/blue-smiley.png`} alt="derp" />
+                        </a>
+                        <span className='caret'>{caret}</span>
+                        
                     </li>
                 </ul>
            
