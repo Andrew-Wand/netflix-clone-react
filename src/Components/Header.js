@@ -1,6 +1,8 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faBell, faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { useHoverIntent } from 'react-use-hoverintent';
 
 
 
@@ -11,11 +13,28 @@ function Header() {
     const bell = <FontAwesomeIcon icon={faBell} />
     const caret = <FontAwesomeIcon icon={faCaretDown} />
 
+    const [display, setDisplay] = useState('notdisplayed');
+    const [isHovering, ref] = useHoverIntent({
+        timeout: 100,
+        sensitivity: 10,
+        interval: 200,
+      });
+
+    const showButton = e => {
+        e.preventDefault();
+        setDisplay("displayed");
+      };
+    
+      const hideButton = e => {
+        e.preventDefault();
+        setDisplay("notdisplayed");
+      };
+
  
 
 
     return (
-        <div className="header-container">
+        <div className="header-container" onMouseLeave={e => hideButton(e)}>
             
             {/* Left side of nav bar */}
         
@@ -69,10 +88,22 @@ function Header() {
                         <a href="/" className='nav-btn right-btn bell'>{bell}</a>
                     </li>
                     <li>
+                        
                         <a href="/" >
-                            <img className='profile-icon' src={`${process.env.PUBLIC_URL}/assets/images/blue-smiley.png`} alt="derp" />
+                            <img 
+                            onMouseEnter={e => showButton(e)}
+                            
+                            className='profile-icon' 
+                            src={`${process.env.PUBLIC_URL}/assets/images/blue-smiley.png`} 
+                            alt="derp" 
+                            />
+                            <span  
+                            onMouseEnter={e => showButton(e)}
+                              
+                            className='caret'>{caret}
+                            </span>
                         </a>
-                        <span className='caret'>{caret}</span>
+                        
                         
                     </li>
                 </ul>
@@ -90,8 +121,9 @@ function Header() {
 
 
 
-        <div className="popup-container">
-            <ul className='popup-list'>
+        <div className={display} onMouseEnter={e => showButton(e)}
+                            onMouseLeave={e => showButton(e)} >
+            <ul className='popup-list' >
                 <a className='profile-link' href="/">
                     <img src={`${process.env.PUBLIC_URL}/assets/images/blue-smiley.png`} alt="derp" className='profile-pic profile-icon' /><span>Profile 1</span>
                 </a>

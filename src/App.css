@@ -112,9 +112,8 @@ img {
 /*  */
 
 /* Popup */
-.popup-container {
-  position: fixed;
-  
+.popup-container, .notdisplayed {
+  display: none;
   
 }
 
@@ -126,7 +125,7 @@ img {
   left: 1680px;
   padding: 0.8rem 0.6rem;
   margin: 0;
-  width: 145px;
+  width: 160px;
   border-bottom: 1px solid #fff;
 
 }
@@ -149,6 +148,22 @@ img {
   text-decoration: underline;
 }
 
+.displayed, .popup-container {
+  position: fixed;
+  animation-name: popupAnim;
+  animation-duration: .4s;
+  display: flex;
+}
+
+@keyframes popupAnim {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
 
 
 
