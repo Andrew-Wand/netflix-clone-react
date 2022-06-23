@@ -62,4 +62,20 @@ img {
   color: #fff;
 }
 
+.right-btn {
+  font-size: 1.3em;
+  margin: 0px 4px 0px 4px;
+}
+
+.glass {
+  transform: rotate(-20deg);
+  display: block;
+  font-size: 1.5em;
+  margin-bottom: -20px;
+}
+
+
+
+
+
 /*  */

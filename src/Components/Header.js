@@ -1,16 +1,16 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass, faBell } from '@fortawesome/free-solid-svg-icons'
 
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {faShoppingCart} from '@fortawesome/free-solid-svg-icons';
 
 
 
 function Header() {
 
-    
+    const magnifyingGlass = <FontAwesomeIcon icon={faMagnifyingGlass} />
+    const bell = <FontAwesomeIcon icon={faBell} />
 
-
+ 
 
 
     return (
@@ -56,13 +56,15 @@ function Header() {
                 
                 <ul className='nav-container'>
                     <li>
-                        <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
+                        <a href="/" className='nav-btn right-btn glass'>{magnifyingGlass}</a>
+                        
+                       
                     </li>
                     <li>
-                        <img src="" alt="DVD" />
+                        <a href="/" className='nav-btn'>DVD</a>
                     </li>
                     <li>
-                        <img src="" alt="derp" />
+                        <a href="/" className='nav-btn right-btn'>{bell}</a>
                     </li>
                     <li>
                         <img src="" alt="derp" />
