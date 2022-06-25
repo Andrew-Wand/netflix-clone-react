@@ -4,11 +4,17 @@
 }
 
 
+body {
+  background-color: #111;
+}
+
+
 
 /* Header */
 
 .left-header {
   display: flex;
+  
 }
 
 .right-container {
@@ -25,7 +31,6 @@ li {
   color: #fff;
   list-style-type: none;
   text-decoration: none;
-  
   font-size: 14px;
   font-family: sans-serif;
 }
@@ -40,6 +45,10 @@ li {
   
 }
 
+.left-nav {
+  list-style: none;
+}
+
 .logo {
   margin-left: 3em;
   height: 4.2em;
@@ -48,11 +57,41 @@ li {
 }
 
 .header-container {
-  background-color: #000;
+  background-color: transparent;
+  animation-name: upAnim;
+  animation-duration: 1.5s;
   height: 68px;
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
+
+
+
+
+.header-container.scrolled {
+  background-color: rgb(20, 20, 20);
+  animation-name: downAnim;
+  animation-duration: .3s;
+}
+
+/* Animation for nav bar */
+
+    /* Up animation */
+@keyframes upAnim {
+  from { background-color: rgb(20, 20, 20);}
+  to { background-color: transparent}
+}
+
+
+    /* Down animation */
+@keyframes downAnim {
+  from { background-color: rgb(20, 20, 20);}
+  to { background-color: rgb(20, 20, 20);}
+}
+
+
+/*  */
 
 .right-header {
   /* position: absolute; */
@@ -166,5 +205,18 @@ img {
 }
 
 
+
+/*  */
+
+/* Main */
+
+.movie-container {
+  
+  z-index: -10;
+  position: relative;
+}
+.movie-img {
+  width: 100%;
+}
 
 /*  */

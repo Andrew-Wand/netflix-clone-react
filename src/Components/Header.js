@@ -1,8 +1,8 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faBell, faCaretDown } from '@fortawesome/free-solid-svg-icons'
-import { useHoverIntent } from 'react-use-hoverintent';
+
 
 
 
@@ -14,12 +14,10 @@ function Header() {
     const caret = <FontAwesomeIcon icon={faCaretDown} />
 
     const [display, setDisplay] = useState('notdisplayed');
-    const [isHovering, ref] = useHoverIntent({
-        timeout: 100,
-        sensitivity: 10,
-        interval: 200,
-      });
 
+
+  
+    // Show/Hide header popup
     const showButton = e => {
         e.preventDefault();
         setDisplay("displayed");
@@ -30,11 +28,27 @@ function Header() {
         setDisplay("notdisplayed");
       };
 
+
+
+      
+      
+     useEffect(() => {
+        document.addEventListener('scroll', () => {
+            let header = document.getElementById('header-container');
+            if (window.scrollY > 10) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        })
+     })
+
  
 
 
     return (
-        <div className="header-container" onMouseLeave={e => hideButton(e)}>
+        
+        <div className="header-container" id='header-container' onMouseLeave={e => hideButton(e)}>
             
             {/* Left side of nav bar */}
         
@@ -44,7 +58,7 @@ function Header() {
                     <img src={`${process.env.PUBLIC_URL}/assets/images/netflix-logo.png`} className='logo' alt="Netflix"  />
                 </a>
                 
-                <ul className='nav-container'>
+                <ul className='nav-container left-nav'>
                     
                     <li >
                         <a className="nav-btn home" href="/">Home</a>
