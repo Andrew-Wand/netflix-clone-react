@@ -15,6 +15,7 @@ function Header() {
     const pencil = <FontAwesomeIcon icon={faPen} />
     const userIcon = <FontAwesomeIcon icon={faUser} />
     const circleQuestion = <FontAwesomeIcon icon={faCircleQuestion} />
+    
 
 
     const [display, setDisplay] = useState('notdisplayed');
