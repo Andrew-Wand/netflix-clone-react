@@ -264,7 +264,7 @@ img {
 .movie-img {
   width: 100%;
   z-index: 1;
-  filter: brightness(77%);
+  filter: brightness(80%);
   
 }
 
@@ -291,8 +291,8 @@ img {
 
 .movie-info {
   position: absolute;
-  top: 25%;
-  left: 10%;
+  top: 28%;
+  left: 5%;
   
 }
 .movie-logo {
