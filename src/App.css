@@ -478,7 +478,7 @@ cursor: pointer;
 /* Footer */
 
 .footer-container {
-  max-width: 980px;
+  max-width: 1500px;
   margin: 20px auto 0;
   padding: 0 4%;
   color: grey;
@@ -488,11 +488,12 @@ cursor: pointer;
 
 .social-links {
   margin-bottom: 1em;
+  font-size: 22px;
   
 }
 
 .social-link {
-  margin-right: 15px;
+  margin-right: 40px;
   color: #fff;
   text-decoration: none;
 }

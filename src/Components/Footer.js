@@ -1,20 +1,36 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faFacebookF, faInstagram, faInstagramSquare, faTwitter, faYoutube } from "@fortawesome/free-brands-svg-icons"
+
 
 function Footer() {
+
+
+  const facebook = <FontAwesomeIcon icon={faFacebookF} />
+  const instagram = <FontAwesomeIcon icon={faInstagram} />
+  const twitter = <FontAwesomeIcon icon={faTwitter} />
+  const youtube = <FontAwesomeIcon icon={faYoutube} />
+
+
+
+
+
+
+
   return (
       <div className="footer-container">
         <div className="social-links">
           <a href="" className="social-link">
-            <span>derp!</span>
+            <i>{facebook}</i>
           </a>
           <a href="" className="social-link">
-          <span>derp!</span>
+          <i>{instagram}</i>
           </a>
           <a href="" className="social-link">
-          <span>derp!</span>
+          <i>{twitter}</i>
           </a>
           <a href="" className="social-link">
-          <span>derp!</span>
+          <i>{youtube}</i>
           </a>
         </div>
         
