@@ -30,9 +30,9 @@ function App() {
         <CarouselItem   img='assets/images/movies/spartacus.jpg'/>
         <CarouselItem  img='assets/images/movies/fma.jpg'/>
         <CarouselItem  img='assets/images/movies/ahs.jpeg'/>
-        <CarouselItem  img='assets/images/movies/jaws.jpg'/>
-        <CarouselItem  img='assets/images/movies/ghostbusters.jpg'/>
         <CarouselItem  img='assets/images/movies/fandf.jpg'/>
+        <CarouselItem  img='assets/images/movies/ghostbusters.jpg'/>
+        <CarouselItem  img='assets/images/movies/jaws.jpg'/>
         <CarouselItem  img='assets/images/movies/ice-age.jpg'/>
         <CarouselItem  img='assets/images/movies/orange-new.jpg'/>
         <CarouselItem  img='assets/images/movies/orange-new.jpg'/>
@@ -72,8 +72,11 @@ function App() {
       </div>
 </div>
 
-     
+ 
     <Footer />
+    
+    
+    
       
     </div>
 
