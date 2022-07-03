@@ -4,9 +4,17 @@ import Main from './Components/Main'
 import Carousel from "./Components/Carousel";
 import CarouselItem from './Components/CarouselItem'
 import Footer from './Components/Footer';
+import data from './Data/movies.jsx'
+import { useState } from 'react';
+
 
 
 function App() {
+
+
+  
+
+
   return (
     
     <div className="App">
@@ -14,7 +22,7 @@ function App() {
       <Main />
       
       <div className="carousel-one">
-      <Carousel >
+      <Carousel carouselTitle="Continue Watching" >
         <CarouselItem  />
         <CarouselItem  />
         <CarouselItem  />
@@ -26,7 +34,7 @@ function App() {
       </Carousel>
       </div>
       <div className="carousel-two">
-      <Carousel >
+      <Carousel carouselTitle="What's New" >
         <CarouselItem  />
         <CarouselItem  />
         <CarouselItem  />
@@ -37,8 +45,8 @@ function App() {
         <CarouselItem  />
       </Carousel>
       </div>
-      <div className="carousel-three">
-      <Carousel >
+      <div className="carousel-three" >
+      <Carousel carouselTitle="Your Favorites" >
         <CarouselItem  />
         <CarouselItem  />
         <CarouselItem  />

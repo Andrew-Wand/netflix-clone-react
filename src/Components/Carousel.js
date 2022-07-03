@@ -6,7 +6,7 @@ import  CarouselItem  from "../Components/CarouselItem";
 
 
 
-function Carousel(props, {items}) {
+function Carousel(props) {
   
 
   
@@ -38,7 +38,7 @@ function Carousel(props, {items}) {
   
 return (
     <div className="carousel-wrapper">
-      <h1 className="item-title">Derp!</h1>
+      <h1 className="item-title">{props.carouselTitle}</h1>
         <div className="carousel-strip" style={{marginLeft: scrollX}} >
             
             <div className="arrow-left" id='arrow-left' onClick={handleLeftArrow}>
@@ -48,7 +48,7 @@ return (
             <div className="arrow-right" onClick={handleRightArrow} >
               <i >{arrowRight}</i>
             </div>
-            <div className="item-content" >{props.children}</div>
+            <div className="item-content">{props.children}</div>
         </div>
       </div>
   )
