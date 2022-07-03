@@ -4,7 +4,7 @@ import Main from './Components/Main'
 import Carousel from "./Components/Carousel";
 import CarouselItem from './Components/CarouselItem'
 import Footer from './Components/Footer';
-import data from './Data/movies.jsx'
+
 import { useState } from 'react';
 
 
@@ -23,8 +23,8 @@ function App() {
       
       <div className="carousel-one">
       <Carousel carouselTitle="Continue Watching" >
-        <CarouselItem  />
-        <CarouselItem  />
+        <CarouselItem img='assets/images/avengers-endgame.jpg' />
+        <CarouselItem  img='assets/images/avengers-endgame.jpg' />
         <CarouselItem  />
         <CarouselItem  />
         <CarouselItem  />

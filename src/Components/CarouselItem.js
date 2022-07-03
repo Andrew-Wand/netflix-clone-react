@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 
 
-function CarouselItem() {
+function CarouselItem(props) {
   
 const [isSelected, setIsSelected] = useState(false);
+
+
 
 
 // if (isSelected) {
@@ -22,10 +24,12 @@ const [isSelected, setIsSelected] = useState(false);
 return (
 
     
-   
     <div className="content-item" onMouseEnter={() => setIsSelected(true)} >
-        <img src={`${process.env.PUBLIC_URL}/assets/images/avengers-endgame.jpg`} alt="derp" className='content-image' />
+        <img src={props.img} alt="derp" className='content-image' />
     </div>
+
+   
+   
 
   
      
